@@ -40,8 +40,16 @@
             padding: 30px 0;
             text-align: center;
             font-family: 'Pathway Gothic One', sans-serif;
-            font-size: 2.5em;
             color: #fff;
+        }
+
+        .meeting-title .main-title {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+
+        .meeting-title .sub-title {
+            font-size: 2em;
         }
 
         /* Estilos para el cuadro de texto del carrusel */
@@ -51,10 +59,10 @@
             border-radius: 10px;
             width: 60%;
             text-align: center;
-            height: 350px; /* Establecemos una altura fija */
+            height: 350px;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Centramos el contenido verticalmente */
+            justify-content: center;
         }
 
         h1 {
@@ -99,16 +107,22 @@
                 font-size: 1.2em;
             }
 
-            .meeting-title {
-                font-size: 1.8em;
-                padding: 20px 0;
+            .meeting-title .main-title {
+                font-size: 2.5em;
+            }
+
+            .meeting-title .sub-title {
+                font-size: 1.5em;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="meeting-title">VI PVC meeting is coming!</div>
+    <div class="meeting-title">
+        <div class="main-title">Further exploring the non-model organisms PVC bacteria</div>
+        <div class="sub-title">VI PVC meeting is coming!</div>
+    </div>
     <!-- Carrusel de Bootstrap -->
     <div id="textCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
         <div class="carousel-inner">
@@ -116,8 +130,9 @@
                 <div class="d-flex justify-content-center align-items-center" style="height:300px;">
                     <div class="text-box">
                         <h4>Confirmed Invited speakers:</h4>
-                        <p>Brian P Hedlund</p>
-                        <p>Chaomin Sun</p>
+                        <p>Brian P Hedlund | USA </p>
+                        <p>Chaomin Sun | CHINA </p>
+                        <p>Christian Jogler | DE </p>
                     </div>
                 </div>
             </div>
@@ -127,7 +142,7 @@
                         <h4>Organizing committee:</h4>
                         <p>Damien P. Devos</p>
                         <p>Olga Lage</p>
-                        <p>Lise Ovreas</p>
+                        <p>Lise Øvreås</p>
                     </div>
                 </div>
             </div>
@@ -143,12 +158,12 @@
     </div>
     <div class="content">
         <h1>Save the dates!</h1>
-        <p>20-23 April</p>
+        <p>13-15 May 2024</p>
     </div>
     <!-- Pie de página -->
     <footer>
-        <p>Location: - , Lille</p>
-        <p>Contact: email | - </p>
+        <p>Location:  Institut Pasteur de Lille, France</p>
+        <p>Contact: vipvcmeeting@gmail.com </p>
         <p>Follow us: 
             <a href="#">Twitter</a>
         </p>
@@ -159,4 +174,3 @@
 </body>
 
 </html>
-
