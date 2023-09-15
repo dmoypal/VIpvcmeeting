@@ -11,12 +11,11 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/21/Lille_gd_place.jpg');
+            background-image: url('img/lille.jpg'); /* Ruta relativa a la imagen en la carpeta img */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            overflow: hidden; /* Para evitar barras de desplazamiento debido al efecto de desenfoque */
-            height: 100vh; /* Aseguramos que el body ocupe toda la altura de la pantalla */
+            height: 100vh;
         }
 
         .content {
@@ -25,7 +24,7 @@
             left: 0;
             width: 100%;
             transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con un poco de transparencia */
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px 0;
             text-align: center;
         }
@@ -40,6 +39,21 @@
             margin-top: 10px;
             font-size: 1.5em;
             color: #555;
+        }
+
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+
+            .content {
+                padding: 10px 0;
+            }
         }
     </style>
 </head>
