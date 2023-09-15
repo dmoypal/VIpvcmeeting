@@ -7,6 +7,8 @@
     <title>VI PVC meeting</title>
     <!-- Incluir las fuentes de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Sanchez&display=swap" rel="stylesheet">
+    <!-- Estilos de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Estilos básicos para la página */
         body {
@@ -38,22 +40,21 @@
             padding: 30px 0;
             text-align: center;
             font-family: 'Pathway Gothic One', sans-serif;
-            font-size: 4em;
+            font-size: 2.5em;
             color: #fff;
         }
 
-        /* Estilos para el GIF y su contenedor */
-        .gif-container {
+        /* Estilos para el cuadro de texto del carrusel */
+        .text-box {
+            background-color: rgba(254, 252, 251, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            text-align: center;
+            height: 350px; /* Establecemos una altura fija */
             display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 0;
-            background-color: #000;
-            height: 200px; /* Altura del GIF */
-        }
-
-        .gif-container img {
-            max-height: 100%;
+            flex-direction: column;
+            justify-content: center; /* Centramos el contenido verticalmente */
         }
 
         h1 {
@@ -108,9 +109,37 @@
 
 <body>
     <div class="meeting-title">VI PVC meeting is coming!</div>
-    <!-- Contenedor del GIF -->
-    <div class="gif-container">
-        <img src="https://media.giphy.com/media/MTbya3k32GED2EyPEX/giphy.gif" alt="GIF">
+    <!-- Carrusel de Bootstrap -->
+    <div id="textCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-center align-items-center" style="height:300px;">
+                    <div class="text-box">
+                        <h4>Confirmed Invited speakers:</h4>
+                        <p>Brian P Hedlund</p>
+                        <p>Chaomin Sun</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center align-items-center" style="height:300px;">
+                    <div class="text-box">
+                        <h4>Organizing committee:</h4>
+                        <p>Damien P. Devos</p>
+                        <p>Olga Lage</p>
+                        <p>Lise Ovreas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center align-items-center" style="height:300px;">
+                    <div class="text-box">
+                        <p>Programme: coming soon</p>
+                        <p>Registration: coming soon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="content">
         <h1>Save the dates!</h1>
@@ -124,6 +153,10 @@
             <a href="#">Twitter</a>
         </p>
     </footer>
+    <!-- jQuery y Bootstrap scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
+
