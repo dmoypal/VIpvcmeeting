@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,7 @@
             position: relative;
             width: 100%;
             background-color: rgba(254, 252, 251, 0.8);
-            padding: 20px 0;
+            padding: 10px 0;
             text-align: center;
         }
 
@@ -38,16 +38,22 @@
             padding: 30px 0;
             text-align: center;
             font-family: 'Pathway Gothic One', sans-serif;
-            font-size: 2.5em;
+            font-size: 4em;
             color: #fff;
         }
 
-        /* Estilos para el GIF */
+        /* Estilos para el GIF y su contenedor */
         .gif-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px 0;
+            padding: 20px 0;
+            background-color: #000;
+            height: 200px; /* Altura del GIF */
+        }
+
+        .gif-container img {
+            max-height: 100%;
         }
 
         h1 {
@@ -101,10 +107,10 @@
 </head>
 
 <body>
-    <div class="meeting-title">VI PVC meeting</div>
+    <div class="meeting-title">VI PVC meeting is coming!</div>
     <!-- Contenedor del GIF -->
     <div class="gif-container">
-        <iframe src="https://giphy.com/embed/MTbya3k32GED2EyPEX" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <img src="https://media.giphy.com/media/MTbya3k32GED2EyPEX/giphy.gif" alt="GIF">
     </div>
     <div class="content">
         <h1>Save the dates!</h1>
@@ -112,8 +118,8 @@
     </div>
     <!-- Pie de página -->
     <footer>
-        <p>Location: -, Lille</p>
-        <p>Contact: mail | phone </p>
+        <p>Location: - , Lille</p>
+        <p>Contact: email | - </p>
         <p>Follow us: 
             <a href="#">Twitter</a>
         </p>
