@@ -21,7 +21,6 @@
             flex-direction: column;
             justify-content: space-between;
         }
-
         .content {
             position: relative;
             width: 100%;
@@ -29,41 +28,30 @@
             padding: 10px 0;
             text-align: center;
         }
-
         .meeting-title {
-            position: relative;
-            width: 100%;
             background-color: rgba(3, 64, 120, 0.7);
-            padding: 30px 0;
             text-align: center;
             font-family: 'Pathway Gothic One', sans-serif;
             color: #fff;
         }
-
-        .logo-left, .logo-right {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+        .logos-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .logo {
             max-height: 80px;
         }
-
-        .logo-left {
-            left: 20px;
+        .titles-container {
+            padding: 20px 0;
         }
-
-        .logo-right {
-            right: 20px;
-        }
-
-        .meeting-title .main-title {
+        .titles-container .main-title {
             font-size: 3.5em;
             margin-bottom: 10px;
         }
-
-        .meeting-title .sub-title {
+        .titles-container .sub-title {
             font-size: 2em;
         }
-
         .text-box {
             background-color: rgba(254, 252, 251, 0.8);
             padding: 20px;
@@ -75,54 +63,47 @@
             flex-direction: column;
             justify-content: center;
         }
-
         h1, h4 {
             margin: 0;
             font-size: 2em;
             color: #333;
         }
-
         p {
             margin-top: 10px;
             font-size: 1.5em;
             color: #555;
         }
-
         footer {
             background-color: rgba(3, 64, 120, 0.9);
             padding: 20px 0;
             text-align: center;
         }
-
         footer, footer p, footer a {
             color: #fff;
             font-size: 1em;
         }
-
         footer a {
             margin: 0 10px;
             text-decoration: none;
         }
-
         footer a:hover {
             text-decoration: underline;
         }
-
         @media (max-width: 768px) {
+            .logo {
+                max-height: 40px;
+            }
+            .titles-container .main-title {
+                font-size: 2.5em;
+            }
+            .titles-container .sub-title {
+                font-size: 1.5em;
+            }
             h1, h4 {
                 font-size: 1.5em;
             }
-
             p {
                 font-size: 1.2em;
-            }
-
-            .meeting-title .main-title {
-                font-size: 2.5em;
-            }
-
-            .meeting-title .sub-title {
-                font-size: 1.5em;
             }
         }
     </style>
@@ -130,10 +111,14 @@
 
 <body>
     <div class="meeting-title">
-        <img src="img/ciil.png" alt="Logo CIIL" class="logo-left">
-        <div class="main-title">Further exploring the non-model organisms PVC bacteria</div>
-        <div class="sub-title">VI PVC meeting is coming!</div>
-        <img src="img/ipl.png" alt="Logo Pasteur Lille" class="logo-right">
+        <div class="logos-container">
+            <img src="img/ciil.png" alt="Logo CIIL" class="logo">
+            <img src="img/ipl.png" alt="Logo Pasteur Lille" class="logo">
+        </div>
+        <div class="titles-container">
+            <div class="main-title">Further exploring the non-model organisms PVC bacteria</div>
+            <div class="sub-title">VI PVC meeting is coming!</div>
+        </div>
     </div>
     
     <div id="textCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
