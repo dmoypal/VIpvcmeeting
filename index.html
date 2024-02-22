@@ -12,39 +12,44 @@
             margin: 0;
             padding: 0;
             font-family: 'Sanchez', serif;
-            background-image: url('img/lille.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
         .content {
+
             position: relative;
             width: 100%;
-            background-color: rgba(254, 252, 251, 0.8);
+            background-color: rgb(233, 233, 233);
             padding: 8px 0;
             text-align: center;
         }
         .meeting-title {
-            background-color: rgba(3, 64, 120, 0.7);
+            background: linear-gradient(rgba(3, 64, 120, 0.7), rgba(3, 64, 120, 0.7)), url('img/lille.jpg');
+            /*background-image: url('img/lille.jpg');*/
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             text-align: center;
             font-family: 'Pathway Gothic One', sans-serif;
             color: #fff;
         }
+
         .logos-container {
             display: flex;
             justify-content: space-between;
-            padding: 10px 20px;
+            
         }
         .logo {
             max-height: 80px;
+            padding: 10px 20px;
         }
-        .titles-container {
-            padding: 20px 0;
+        .logo2 {
+            max-height: 250px;
+            justify-content: center;
         }
+
         .titles-container .main-title {
             font-size: 3.5em;
             margin-bottom: 10px;
@@ -79,7 +84,7 @@
             color: #555;
         }
         footer {
-            background-color: rgba(3, 64, 120, 0.9);
+            background-color: rgba(3, 64, 120);
             padding: 20px 0;
             text-align: center;
         }
@@ -131,6 +136,60 @@
         }
 
 
+        .countdown-container {
+            font-family: Arial, sans-serif;
+            background-color: rgba(3, 64, 120, 0.9);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            width: 100%;
+            margin: auto;
+        
+        }
+        .countdown-elt {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .countdown-elt span {
+            display: block;
+            font-size: 2em;
+        }
+        .countdown-label {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .launch-button {
+            background-color: rgb(243,246,249);
+            color: rgb(3, 64, 120);
+            width: 50%;
+            padding: 10px 20px; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px; 
+            margin-bottom: 10px; 
+            display: block; 
+            margin-left: auto;
+            margin-right: auto;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+        }
+        .launch-button:hover {
+            background-color: rgb(255,222,89);
+            text-decoration: none;
+            transform: scale(1.2);
+            font-weight: bold;
+
+        }
+        #textCarousel {
+            background-color: rgb(148, 148, 148);
+        }
+
+
+
+
     </style>
 </head>
 
@@ -138,11 +197,36 @@
     <div class="meeting-title">
         <div class="logos-container">
             <img src="img/ciil.png" alt="Logo CIIL" class="logo">
-            <img src="img/ipl.png" alt="Logo Pasteur Lille" class="logo">
-        </div>
+            <img src="img/ipl.png" alt="Logo Pasteur Lille" class="logo">     
+        </div> 
         <div class="titles-container">
             <div class="main-title">Further exploring the non-model organisms PVC bacteria</div>
             <div class="sub-title">VI PVC meeting is coming!</div>
+            <img src="img/LOGO_VIPVCMEETING.svg" alt="Logo VI PVC meeting" class="logo2">
+        </div>
+
+        <div class="countdown-container">
+            <div class="countdown-elt">
+                <span id="dias">00</span>
+                <div class="countdown-label">days</div>
+            </div>
+            <div class="countdown-elt">
+                <span id="horas">00</span>
+                <div class="countdown-label">hrs</div>
+            </div>
+            <div class="countdown-elt">
+                <span id="minutos">00</span>
+                <div class="countdown-label">min</div>
+            </div>
+            <div class="countdown-elt">
+                <span id="segundos">00</span>
+                <div class="countdown-label">sec</div>
+            </div>
+            <!--<div class="launch-button" href="https://evenium.events/ykuqcm0t/">More info here!</div>-->
+            <a href="flyer.pdf">
+                <div class="launch-button">More info here!</div>
+            </a>
+            
         </div>
     </div>
     
@@ -152,8 +236,8 @@
                 <div class="d-flex justify-content-center align-items-center" style="height:300px;">
                     <div class="text-box">
                         <h4>Confirmed Invited speakers:</h4>
-                        <speaker>Brian P Hedlund | USA</speaker>
-                        <speaker>Chaomin Sun | CHINA</speaker>
+                        <speaker>Brian P Hedlund | US</speaker>
+                        <speaker>Chaomin Sun | CN</speaker>
                         <speaker>Christian Jogler | DE</speaker>
                         <speaker>Carlos Santana-Molina | NL</speaker>
                         <speaker>Lauren Davey | CA </speaker>
@@ -208,3 +292,32 @@
 </body>
 
 </html>
+
+<script>
+    function actualizarCuentaAtras() {
+        const fechaEvento = new Date("May 13, 2024 00:00:00").getTime();
+        const ahora = new Date().getTime();
+        const diferencia = fechaEvento - ahora;
+
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        document.getElementById('dias').innerText = dias.toString().padStart(2, '0');
+        document.getElementById('horas').innerText = horas.toString().padStart(2, '0');
+        document.getElementById('minutos').innerText = minutos.toString().padStart(2, '0');
+        document.getElementById('segundos').innerText = segundos.toString().padStart(2, '0');
+
+        if (diferencia < 0) {
+            clearInterval(intervalo);
+            document.getElementById('dias').innerText = '00';
+            document.getElementById('horas').innerText = '00';
+            document.getElementById('minutos').innerText = '00';
+            document.getElementById('segundos').innerText = '00';
+        }
+    }
+
+    // Actualizar la cuenta atrás cada segundo
+    const intervalo = setInterval(actualizarCuentaAtras, 1000);
+</script>
